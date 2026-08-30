@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="canonical" href="https://tyreest.github.io/tyreest-legal/aneryo/privacy/" />
+  <title>Gizlilik Politikası — Aneryo | Privacy Policy</title>
+  <style>
+    :root {
+      --bg: #FDFBF7;
+      --card-bg: #FFFFFF;
+      --text: #1C1B1A;
+      --text-muted: #5E5854;
+      --border: #E8E2D9;
+      --accent: #B85C38;
+      --accent-hover: #9E4D2E;
+      --badge-bg: #F0EAE1;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #141210;
+        --card-bg: #1F1C1A;
+        --text: #F2EFE9;
+        --text-muted: #A8A19B;
+        --border: #332F2B;
+        --accent: #E07A5F;
+        --accent-hover: #F28C70;
+        --badge-bg: #2B2622;
+      }
+    }
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      padding: 32px 20px 80px;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+      line-height: 1.65;
+      color: var(--text);
+      background-color: var(--bg);
+      display: flex;
+      justify-content: center;
+    }
+    .container {
+      width: 100%;
+      max-width: 46rem;
+    }
+    header {
+      margin-bottom: 2rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .brand-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-bottom: 1rem;
+    }
+    .app-title {
+      font-size: 1.85rem;
+      font-weight: 700;
+      margin: 0;
+      color: var(--accent);
+      letter-spacing: -0.02em;
+    }
+    .lang-switcher {
+      display: inline-flex;
+      background: var(--badge-bg);
+      border-radius: 20px;
+      padding: 4px;
+      border: 1px solid var(--border);
+    }
+    .lang-btn {
+      border: none;
+      background: none;
+      padding: 6px 14px;
+      border-radius: 16px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+    .lang-btn.active {
+      background: var(--card-bg);
+      color: var(--text);
+      box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+    }
+    .meta-box {
+      font-size: 0.92rem;
+      color: var(--text-muted);
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+    .meta-item {
+      display: flex;
+      gap: 8px;
+    }
+    .meta-label {
+      font-weight: 600;
+      min-width: 120px;
+    }
+    h1 {
+      font-size: 1.7rem;
+      margin-top: 1.2rem;
+      margin-bottom: 0.5rem;
+      letter-spacing: -0.01em;
+    }
+    h2 {
+      font-size: 1.25rem;
+      margin-top: 2rem;
+      margin-bottom: 0.6rem;
+      color: var(--accent);
+      letter-spacing: -0.01em;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 0.3rem;
+    }
+    h3 {
+      font-size: 1.05rem;
+      margin-top: 1.2rem;
+      margin-bottom: 0.4rem;
+    }
+    p, li {
+      font-size: 1rem;
+      color: var(--text);
+    }
+    ul, ol {
+      padding-left: 1.4rem;
+      margin-bottom: 1.2rem;
+    }
+    li {
+      margin-bottom: 0.35rem;
+    }
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.2rem 1.4rem;
+      margin: 1.2rem 0;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+    }
+    .card p:last-child {
+      margin-bottom: 0;
+    }
+    .lang-section {
+      display: none;
+    }
+    .lang-section.active {
+      display: block;
+    }
+    footer {
+      margin-top: 3.5rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border);
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand-row">
+        <h2 class="app-title" style="border:none;margin:0;padding:0;">Aneryo</h2>
+        <div class="lang-switcher">
+          <button class="lang-btn active" id="btn-tr" onclick="setLang('tr')">Türkçe</button>
+          <button class="lang-btn" id="btn-en" onclick="setLang('en')">English</button>
+        </div>
+      </div>
+      <div class="meta-box">
+        <div class="meta-item"><span class="meta-label">Uygulama / App:</span> <span>Aneryo</span></div>
+        <div class="meta-item"><span class="meta-label">Paket / Package:</span> <span>com.tyreest.aneryo</span></div>
+        <div class="meta-item"><span class="meta-label">Geliştirici / Dev:</span> <span>Tyreest Studio</span></div>
+        <div class="meta-item"><span class="meta-label">İletişim / Contact:</span> <a href="mailto:tyreest.studio@gmail.com">tyreest.studio@gmail.com</a></div>
+      </div>
+    </header>
+
+    <!-- TÜRKÇE BÖLÜM -->
+    <main id="section-tr" class="lang-section active">
+      <h1>Gizlilik Politikası</h1>
+      <p><em>Son güncelleme: 30 Ağustos 2026</em></p>
+
+      <h2>1. Genel Bakış</h2>
+      <p>Bu Gizlilik Politikası, Tyreest Studio tarafından geliştirilen <strong>Aneryo</strong> mobil uygulamasının (<code>com.tyreest.aneryo</code>) verilerinizi nasıl işlediğini ve koruduğunu açıklar.</p>
+      <p>Aneryo; özel günlerinizi, planlarınızı, geri ve ileri sayımlarınızı ile fotoğraflı anılarınızı kaydetmenizi sağlayan <strong>yerel öncelikli (local-first)</strong> bir yaşam günlüğü ve takvim uygulamasıdır. Çekirdek işlevler tamamen çevrimdışı çalışır; temel kullanım için hesap açmak veya giriş yapmak zorunlu değildir.</p>
+
+      <h2>2. İşlenen Bilgiler</h2>
+      <p>Aneryo, yalnızca uygulamanın sunduğu özellikleri kullanabilmeniz için kendi girdiğiniz bilgileri işler:</p>
+      <ul>
+        <li><strong>Etkinlik ve Planlar:</strong> Başlık, açıklama, başlangıç tarihi/saati, tüm gün tercihi, kategori, hatırlatıcı süresi ve tekrarlama seçenekleri.</li>
+        <li><strong>Anılar ve Günlük Notları:</strong> Tarih, başlık, anı notu, kategori ve bağlı etkinlik bilgisi.</li>
+        <li><strong>Sayaçlar:</strong> Başlık, hedef/başlangıç tarihi, sayım modu (geri/ileri sayım) ve ana ekran görünürlük ayarı.</li>
+        <li><strong>Fotoğraflar:</strong> Anılarınıza eklemek amacıyla sistem fotoğraf seçicisi aracılığıyla bizzat seçtiğiniz fotoğraflar.</li>
+        <li><strong>Uygulama Tercihleri:</strong> Bildirim saatleri, ana ekran sekme öncelikleri ve yerel ayarlar.</li>
+        <li><strong>Hesap Bilgisi (Yalnızca İsteğe Bağlı Bulut Yedeklemede):</strong> Bulut yedekleme özelliğini kullanmayı seçerseniz, Google Sign-In aracılığıyla sağlanan Google kullanıcı kimliği (UID), e-posta adresi ve profil adı.</li>
+      </ul>
+
+      <div class="card">
+        <h3>Toplanmayan ve İstenmeyen Veriler</h3>
+        <ul>
+          <li><strong>Konum Bilgisi:</strong> GPS, kesin veya yaklaşık konum verisi istenmez ve toplanmaz.</li>
+          <li><strong>Rehber / Kişiler:</strong> Cihaz rehberine erişim istenmez ve okunmaz.</li>
+          <li><strong>Geniş Depolama / Galeri İzni:</strong> Cihazınızın tüm galerisine veya dosya sistemine (<code>READ_EXTERNAL_STORAGE</code>, <code>READ_MEDIA_IMAGES</code>, <code>MANAGE_EXTERNAL_STORAGE</code>) genel erişim talep edilmez. Fotoğraflar yalnızca Android Sistem Fotoğraf Seçicisi (Photo Picker) üzerinden kullanıcının seçimiyle tekil olarak alınır.</li>
+          <li><strong>Reklam Kimliği:</strong> Uygulamada reklam SDK'sı (Google AdMob vb.) bulunmaz; reklam kimliği izlenmez.</li>
+          <li><strong>Analitik & Çökme Telemetrisi:</strong> Üçüncü taraf analitik (Google Analytics, Firebase Analytics vb.) veya harici çökme raporlayıcı (Crashlytics, Sentry vb.) bulunmaz.</li>
+          <li><strong>Biyometri:</strong> Sistem kitaplıklarının getirdiği izinler haricinde uygulama biyometrik verileri okumaz ve işlemez.</li>
+        </ul>
+      </div>
+
+      <h2>3. Yerel Veri Saklama ve Dosya İşleme</h2>
+      <ul>
+        <li><strong>Cihaz İçi Veritabanı:</strong> Kayıtlarınız, cihazınızın korumalı dahili depolama alanındaki SQLite veritabanında (<code>aneryo.db</code>) tutulur.</li>
+        <li><strong>Fotoğraf Depolama:</strong> Eklenen fotoğraflar sıkıştırılarak uygulamanın özel iç dizinine (<code>/photos</code>) kopyalanır. Orijinal dosyalarınıza dokunulmaz.</li>
+        <li><strong>Yerel ZIP Yedekleme:</strong> "Yedek Dosyası Oluştur" seçeneğiyle oluşturulan <code>.zip</code> arşivi, tamamen kullanıcının dosya seçici üzerinden belirlediği yerel dizine kaydedilir; sunuculara otomatik olarak aktarılmaz.</li>
+        <li><strong>Yerel Bildirimler:</strong> Hatırlatmalar <code>flutter_local_notifications</code> ve Android AlarmManager kullanılarak cihaz üzerinde yerel olarak zamanlanır. Dışarıdan anlık bildirim (push) servisi kullanılmaz.</li>
+        <li><strong>Ana Ekran Araçları (Widget):</strong> Masaüstü widget'ları cihazın yerel depolamasındaki veriyi yansıtır.</li>
+      </ul>
+
+      <h2>4. İsteğe Bağlı Bulut Yedekleme (Cloud Backup)</h2>
+      <p>Aneryo, veri kaybını önlemek isteyen kullanıcılar için <strong>tamamen isteğe bağlı</strong> bir Bulut Yedekleme imkanı sunar. Bu özellik siz Google hesabınızla giriş yapıp açıkça yedekleme başlatmadığınız sürece tamamen kapalıdır.</p>
+      <ul>
+        <li><strong>Google Sign-In & Firebase Auth:</strong> Yedeklerin yalnızca size ait olduğunu doğrulamak için Google hesabınızla oturum açılır ve Firebase Authentication belirteci kullanılır.</li>
+        <li><strong>Firebase App Check & Play Integrity:</strong> Sunucu isteklerinin sahte veya kötü niyetli uygulamalardan gelmediğini doğrulamak için Google Play Integrity altyapısı teknik koruma sağlar.</li>
+        <li><strong>İstemci Tarafı Kriptografik Şifreleme:</strong> Yedeklenecek veritabanı ve fotoğraflar cihazdan çıkmadan önce AES-GCM ile şifrelenir.</li>
+        <li><strong>Güvenli Depolama:</strong> Şifreli yedek paketi Google Cloud altyapısında saklanır; sunucular verilerinizi düz metin olarak görüntüleyemez.</li>
+        <li>Google servislerinin veri işleme politikası <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Gizlilik Politikası</a>'na tabidir.</li>
+      </ul>
+
+      <h2>5. Uygulama İçi Satın Alımlar (Aneryo Pro)</h2>
+      <p>Aneryo Pro (<code>aneryo_pro_lifetime</code>) tek seferlik bir satın alımdır.</p>
+      <ul>
+        <li>Ödemeler doğrudan <strong>Google Play Faturalandırma Sistemi (Google Play In-App Billing)</strong> tarafından yönetilir.</li>
+        <li>Kredi kartı veya ödeme bilgileriniz Aneryo tarafından toplanmaz, işlenmez ve saklanmaz.</li>
+        <li>Uygulama yalnızca satın alımın geçerliliğini Google Play üzerinden doğrular ve Pro özellikleri aktif eder.</li>
+      </ul>
+
+      <h2>6. Veri Güvenliği ve Saklama</h2>
+      <ul>
+        <li>Yerel verileriniz Android işletim sisteminin sandbox koruması altındadır.</li>
+        <li>Ağ iletişiminde HTTPS / TLS şifrelemesi kullanılır; açık metin (cleartext/HTTP) trafiği kapalıdır.</li>
+        <li>Bulut yedekleme paketleri aktarılmadan önce AES-GCM ile kilitlenir.</li>
+      </ul>
+
+      <h2>7. Verilerinizi Silme Hakları</h2>
+      <ul>
+        <li><strong>Yerel Veriler:</strong> Kayıtlarınızı uygulama içinden silebilir, cihaz ayarlarından uygulama verilerini temizleyebilir veya uygulamayı kaldırarak saniyeler içinde kalıcı olarak silebilirsiniz.</li>
+        <li><strong>Yerel Yedekler:</strong> Oluşturduğunuz <code>.zip</code> dosyalarını dosya yöneticinizden silebilirsiniz.</li>
+        <li><strong>Bulut Yedekleri:</strong> Bulut yedekleme kullandıysanız, kayıtlarınızı uygulama içinden silebilir veya <a href="mailto:tyreest.studio@gmail.com">tyreest.studio@gmail.com</a> adresine e-posta göndererek hesabınıza bağlı bulut yedeklerinin kalıcı olarak silinmesini talep edebilirsiniz.</li>
+      </ul>
+
+      <h2>8. Çocukların Gizliliği</h2>
+      <p>Aneryo 13 yaş altı çocukları hedeflemez ve bu yaş grubundan bilerek veri toplamaz.</p>
+
+      <h2>9. İletişim</h2>
+      <p>Gizlilikle ilgili tüm sorularınız için bizimle iletişime geçebilirsiniz:</p>
+      <p><strong>E-posta:</strong> <a href="mailto:tyreest.studio@gmail.com">tyreest.studio@gmail.com</a><br>
+      <strong>Geliştirici:</strong> Tyreest Studio</p>
+    </main>
+
+    <!-- ENGLISH SECTION -->
+    <main id="section-en" class="lang-section">
+      <h1>Privacy Policy</h1>
+      <p><em>Last updated: August 30, 2026</em></p>
+
+      <h2>1. Overview</h2>
+      <p>This Privacy Policy explains how <strong>Aneryo</strong> (<code>com.tyreest.aneryo</code>), developed by Tyreest Studio, handles and protects your data.</p>
+      <p>Aneryo is a <strong>local-first</strong> life journal and calendar application designed to help users track special occasions, upcoming plans, countdowns/count-ups, and photo memories. Core features operate offline; no account registration is required for fundamental use.</p>
+
+      <h2>2. Information Processed</h2>
+      <p>Aneryo only processes information you intentionally enter or create:</p>
+      <ul>
+        <li><strong>Events & Plans:</strong> Title, description, start date/time, all-day flag, category, reminder lead time, and recurrence rules.</li>
+        <li><strong>Memories & Notes:</strong> Date, title, notes, category, and links to events.</li>
+        <li><strong>Counters:</strong> Title, anchor date, count mode (countdown or count-up), and home visibility preference.</li>
+        <li><strong>Photos:</strong> Photos you individually select via the Android system picker to attach to memories.</li>
+        <li><strong>Preferences:</strong> Reminder times, layout settings, and local preferences.</li>
+        <li><strong>Account Info (Optional Cloud Backup Only):</strong> If you choose to enable Cloud Backup, Google UID, email address, and profile name via Google Sign-In.</li>
+      </ul>
+
+      <div class="card">
+        <h3>Data NOT Collected or Requested</h3>
+        <ul>
+          <li><strong>Location:</strong> No GPS or location data is requested or collected.</li>
+          <li><strong>Contacts:</strong> No access to your address book is requested or read.</li>
+          <li><strong>Broad Media / Storage Access:</strong> Aneryo does not request broad permissions to scan device storage (<code>READ_EXTERNAL_STORAGE</code>, <code>READ_MEDIA_IMAGES</code>, <code>MANAGE_EXTERNAL_STORAGE</code>). Photos are accessed individually through the secure Android Photo Picker.</li>
+          <li><strong>Advertising Identifiers:</strong> Aneryo contains zero advertising SDKs (no Google AdMob). No advertising IDs are tracked.</li>
+          <li><strong>Analytics & Telemetry:</strong> No third-party behavioral analytics (no Google Analytics, Firebase Analytics) and no third-party crash reporting SDKs (no Crashlytics, Sentry).</li>
+          <li><strong>Biometrics:</strong> Aneryo does not read, collect, or store fingerprint, facial recognition, or biometric data.</li>
+        </ul>
+      </div>
+
+      <h2>3. Local Storage and File Processing</h2>
+      <ul>
+        <li><strong>Local Database:</strong> Your data is stored in an isolated SQLite database (<code>aneryo.db</code>) within the app sandbox.</li>
+        <li><strong>Local Photos:</strong> Attached photos are compressed and stored in the app's private documents directory (<code>/photos</code>). Original files are never modified.</li>
+        <li><strong>Local ZIP Backup:</strong> Backups created via "Create Backup File" are packaged into a ZIP archive and saved only to a location you choose via Android Storage Access Framework (SAF).</li>
+        <li><strong>Local Notifications:</strong> Scheduled reminders use <code>flutter_local_notifications</code> and Android AlarmManager locally on device. No push servers are used.</li>
+        <li><strong>Widgets:</strong> Home screen widgets display data cached locally on your device.</li>
+      </ul>
+
+      <h2>4. Optional Cloud Backup</h2>
+      <p>Aneryo provides an <strong>optional</strong> Cloud Backup feature. It is completely inactive until you explicitly sign in with your Google account and initiate a backup.</p>
+      <ul>
+        <li><strong>Google Sign-In & Firebase Auth:</strong> Authenticates your identity and verifies ownership via Firebase Authentication.</li>
+        <li><strong>Firebase App Check & Play Integrity:</strong> Google Play Integrity API verifies that network requests originate from an authentic Aneryo build.</li>
+        <li><strong>Client-Side Encryption:</strong> All backup data and photos are encrypted on-device using AES-GCM prior to transmission.</li>
+        <li><strong>Encrypted Cloud Storage:</strong> Stored on secure Google Cloud infrastructure; servers cannot read your unencrypted content.</li>
+        <li>Google services data handling is governed by the <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a>.</li>
+      </ul>
+
+      <h2>5. In-App Purchases (Aneryo Pro)</h2>
+      <p>Aneryo Pro (<code>aneryo_pro_lifetime</code>) is a one-time lifetime license.</p>
+      <ul>
+        <li>All payments are processed exclusively by <strong>Google Play In-App Billing</strong>.</li>
+        <li>Credit card and payment credentials are never collected, processed, or stored by Aneryo.</li>
+        <li>The app only queries Google Play to verify that your account owns the entitlement token.</li>
+      </ul>
+
+      <h2>6. Security and Retention</h2>
+      <ul>
+        <li>Local data is protected by the Android sandbox.</li>
+        <li>Network requests use HTTPS / TLS encryption; unencrypted cleartext traffic is disabled.</li>
+        <li>Backup packages are encrypted with AES-GCM before leaving the device.</li>
+      </ul>
+
+      <h2>7. Your Deletion Rights</h2>
+      <ul>
+        <li><strong>Local Data:</strong> Delete entries within the app, clear app storage in Android Settings, or uninstall the app to erase all local data immediately.</li>
+        <li><strong>Local Backups:</strong> Delete your exported <code>.zip</code> files via any file manager.</li>
+        <li><strong>Cloud Backups:</strong> Remove backups from the app or email us at <a href="mailto:tyreest.studio@gmail.com">tyreest.studio@gmail.com</a> to request immediate, permanent deletion of cloud backups and associated account records.</li>
+      </ul>
+
+      <h2>8. Children's Privacy</h2>
+      <p>Aneryo is not intended for children under 13 and does not knowingly collect personal data from them.</p>
+
+      <h2>9. Contact Us</h2>
+      <p>If you have any questions regarding this Privacy Policy, please contact:</p>
+      <p><strong>Email:</strong> <a href="mailto:tyreest.studio@gmail.com">tyreest.studio@gmail.com</a><br>
+      <strong>Developer:</strong> Tyreest Studio</p>
+    </main>
+
+    <footer>
+      <p>© 2026 Tyreest Studio. All rights reserved.</p>
+      <p><a href="https://tyreest.github.io/tyreest-legal/">Tyreest Studio Legal Portal</a></p>
+    </footer>
+  </div>
+
+  <script>
+    function setLang(lang) {
+      const isEn = lang === 'en';
+      document.getElementById('section-tr').classList.toggle('active', !isEn);
+      document.getElementById('section-en').classList.toggle('active', isEn);
+      document.getElementById('btn-tr').classList.toggle('active', !isEn);
+      document.getElementById('btn-en').classList.toggle('active', isEn);
+      document.documentElement.lang = isEn ? 'en' : 'tr';
+      if (history.replaceState) {
+        const url = new URL(window.location);
+        url.searchParams.set('lang', lang);
+        window.history.replaceState({}, '', url);
+      }
+    }
+    // Check initial query parameter
+    const params = new URLSearchParams(window.location.search);
+    if (params.get('lang') === 'en') {
+      setLang('en');
+    }
+  </script>
+</body>
+</html>
