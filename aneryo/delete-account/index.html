@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="canonical" href="https://tyreest.github.io/tyreest-legal/aneryo/delete-account/" />
+  <title>Hesap Silme — Aneryo | Account Deletion</title>
+  <style>
+    :root {
+      --bg: #FDFBF7;
+      --card-bg: #FFFFFF;
+      --text: #1C1B1A;
+      --text-muted: #5E5854;
+      --border: #E8E2D9;
+      --accent: #B85C38;
+      --accent-hover: #9E4D2E;
+      --badge-bg: #F0EAE1;
+      --danger: #B42318;
+      --danger-bg: #FEF3F2;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #141210;
+        --card-bg: #1F1C1A;
+        --text: #F2EFE9;
+        --text-muted: #A8A19B;
+        --border: #332F2B;
+        --accent: #E07A5F;
+        --accent-hover: #F28C70;
+        --badge-bg: #2B2622;
+        --danger: #F97066;
+        --danger-bg: #2A1614;
+      }
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      padding: 32px 20px 80px;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+      line-height: 1.65;
+      color: var(--text);
+      background-color: var(--bg);
+      display: flex;
+      justify-content: center;
+    }
+    .container { width: 100%; max-width: 46rem; }
+    header {
+      margin-bottom: 2rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .brand-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-bottom: 1rem;
+    }
+    .app-title {
+      font-size: 1.85rem;
+      font-weight: 700;
+      margin: 0;
+      color: var(--accent);
+      letter-spacing: -0.02em;
+    }
+    .lang-switcher {
+      display: inline-flex;
+      background: var(--badge-bg);
+      border-radius: 20px;
+      padding: 4px;
+      border: 1px solid var(--border);
+    }
+    .lang-btn {
+      border: none;
+      background: none;
+      padding: 6px 14px;
+      border-radius: 16px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      cursor: pointer;
+    }
+    .lang-btn.active {
+      background: var(--card-bg);
+      color: var(--text);
+      box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+    }
+    .meta-box {
+      font-size: 0.92rem;
+      color: var(--text-muted);
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+    .meta-item { display: flex; gap: 8px; flex-wrap: wrap; }
+    .meta-label { font-weight: 600; min-width: 120px; }
+    h1 {
+      font-size: 1.7rem;
+      margin-top: 1.2rem;
+      margin-bottom: 0.5rem;
+    }
+    h2 {
+      font-size: 1.25rem;
+      margin-top: 2rem;
+      margin-bottom: 0.6rem;
+      color: var(--accent);
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 0.3rem;
+    }
+    p, li { font-size: 1rem; color: var(--text); }
+    ul, ol { padding-left: 1.4rem; margin-bottom: 1.2rem; }
+    li { margin-bottom: 0.35rem; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.2rem 1.4rem;
+      margin: 1.2rem 0;
+    }
+    .cta-card {
+      border-color: var(--accent);
+      background: var(--badge-bg);
+    }
+    .cta-card h2 {
+      margin-top: 0;
+      border: none;
+      padding: 0;
+    }
+    .steps {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1rem 1.2rem;
+      font-weight: 600;
+      margin: 0.8rem 0 1.2rem;
+    }
+    .mailto-btn {
+      display: inline-block;
+      margin-top: 0.6rem;
+      padding: 12px 18px;
+      background: var(--accent);
+      color: #fff !important;
+      border-radius: 10px;
+      font-weight: 600;
+      text-decoration: none !important;
+    }
+    .mailto-btn:hover { background: var(--accent-hover); }
+    .danger-note {
+      background: var(--danger-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1rem 1.2rem;
+      color: var(--text);
+    }
+    .lang-section { display: none; }
+    .lang-section.active { display: block; }
+    footer {
+      margin-top: 3.5rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border);
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      text-align: center;
+    }
+    code {
+      font-size: 0.92em;
+      background: var(--badge-bg);
+      padding: 0.1em 0.35em;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand-row">
+        <h2 class="app-title" style="border:none;margin:0;padding:0;">Aneryo</h2>
+        <div class="lang-switcher">
+          <button class="lang-btn active" id="btn-tr" onclick="setLang('tr')">Türkçe</button>
+          <button class="lang-btn" id="btn-en" onclick="setLang('en')">English</button>
+        </div>
+      </div>
+      <div class="meta-box">
+        <div class="meta-item"><span class="meta-label">Uygulama / App:</span> <span>Aneryo</span></div>
+        <div class="meta-item"><span class="meta-label">Paket / Package:</span> <span>com.tyreest.aneryo</span></div>
+        <div class="meta-item"><span class="meta-label">Geliştirici / Dev:</span> <span>Tyreest Studio</span></div>
+        <div class="meta-item"><span class="meta-label">İletişim / Contact:</span> <a href="mailto:tyreest.studio@gmail.com">tyreest.studio@gmail.com</a></div>
+      </div>
+    </header>
+
+    <main id="section-tr" class="lang-section active">
+      <h1>Hesap ve bulut verilerini silme</h1>
+      <p>Bu sayfa, Google Play hesap silme gereksinimi için <strong>Aneryo</strong> (<code>com.tyreest.aneryo</code>) bulut hesabı ve Aneryo’ya ait bulut verilerini nasıl sileceğinizi açıklar. Giriş gerektirmez.</p>
+
+      <div class="card cta-card">
+        <h2>Uygulama içinden sil (önerilen)</h2>
+        <p>Aneryo yüklüyse ve Google ile giriş yaptıysanız:</p>
+        <div class="steps">
+          Ayarlar → Bulut Yedekleme → Hesabı ve bulut verilerini sil
+        </div>
+        <p>Onay diyaloğunda <strong>Kalıcı olarak sil</strong> seçeneğini kullanın. Google hesabınızı yeniden seçmeniz istenebilir.</p>
+      </div>
+
+      <div class="card">
+        <h2>Uygulamaya erişemiyorsanız</h2>
+        <p>E-posta ile silme talebi gönderebilirsiniz. Konu satırını değiştirmeden kullanın ve Aneryo’da kullandığınız Google e-posta adresini yazın. Şifre, OTP veya başka hassas bilgi göndermeyin.</p>
+        <a class="mailto-btn"
+           href="mailto:tyreest.studio@gmail.com?subject=Aneryo%20Account%20Deletion%20Request&body=Aneryo%20hesab%C4%B1m%C4%B1%20ve%20Aneryo%27ya%20ait%20bulut%20verilerimi%20silmek%20istiyorum.%0A%0AAneryo%27da%20kulland%C4%B1%C4%9F%C4%B1m%20Google%20e-posta%3A%0A">
+          tyreest.studio@gmail.com adresine yaz
+        </a>
+      </div>
+
+      <h2>Silinenler</h2>
+      <ul>
+        <li>Aneryo Firebase Authentication uygulama hesabı (UID)</li>
+        <li>Aneryo bulut yedekleri (şifreli yedek paketleri)</li>
+        <li>Sunucu tarafındaki Aneryo hesap / yedek metadata kayıtları (varsa)</li>
+      </ul>
+
+      <h2>Silinmeyenler</h2>
+      <ul>
+        <li>Google hesabınız</li>
+        <li>Google Play satın alma geçmişiniz (Aneryo Pro dahil)</li>
+        <li>Cihazınızdaki yerel Aneryo günlük / anı verileri (<code>aneryo.db</code>) — bunlar uygulama içi yerel silme veya Android uygulama verisi temizleme ile ayrıca silinebilir</li>
+      </ul>
+
+      <div class="danger-note">
+        <strong>Saklama:</strong> Silme işlemi tamamlandığında Aneryo’ya ait bulut hesabı ve bulut verileri kalıcı olarak silinir. Ayrı bir yasal veya teknik bekletme süresi uygulanmaz.
+      </div>
+
+      <h2>Gizlilik</h2>
+      <p>Ayrıntılar için <a href="https://tyreest.github.io/tyreest-legal/aneryo/privacy/">Aneryo Gizlilik Politikası</a>.</p>
+    </main>
+
+    <main id="section-en" class="lang-section">
+      <h1>Delete account and cloud data</h1>
+      <p>This page explains how to delete your <strong>Aneryo</strong> (<code>com.tyreest.aneryo</code>) cloud account and Aneryo cloud data for Google Play’s account deletion requirement. No login is required on this page.</p>
+
+      <div class="card cta-card">
+        <h2>Delete in the app (recommended)</h2>
+        <p>If Aneryo is installed and you signed in with Google:</p>
+        <div class="steps">
+          Settings → Cloud Backup → Delete account and cloud data
+        </div>
+        <p>Confirm with <strong>Delete permanently</strong>. You may be asked to select your Google account again.</p>
+      </div>
+
+      <div class="card">
+        <h2>If you cannot access the app</h2>
+        <p>Email a deletion request. Keep the subject line and include the Google email you used with Aneryo. Do not send passwords, OTPs, or other sensitive credentials.</p>
+        <a class="mailto-btn"
+           href="mailto:tyreest.studio@gmail.com?subject=Aneryo%20Account%20Deletion%20Request&body=Please%20delete%20my%20Aneryo%20account%20and%20Aneryo%20cloud%20data.%0A%0AGoogle%20email%20used%20with%20Aneryo%3A%0A">
+          Email tyreest.studio@gmail.com
+        </a>
+      </div>
+
+      <h2>What is deleted</h2>
+      <ul>
+        <li>Aneryo Firebase Authentication app account (UID)</li>
+        <li>Aneryo cloud backups (encrypted backup packages)</li>
+        <li>Server-side Aneryo account / backup metadata records, if any</li>
+      </ul>
+
+      <h2>What is not deleted</h2>
+      <ul>
+        <li>Your Google account</li>
+        <li>Google Play purchase history (including Aneryo Pro)</li>
+        <li>Local Aneryo journal / memory data on your device (<code>aneryo.db</code>) — removable separately via in-app local deletion or clearing Android app data</li>
+      </ul>
+
+      <div class="danger-note">
+        <strong>Retention:</strong> When deletion completes, Aneryo cloud account and cloud data are permanently deleted. No separate legal or technical retention period is applied.
+      </div>
+
+      <h2>Privacy</h2>
+      <p>See the <a href="https://tyreest.github.io/tyreest-legal/aneryo/privacy/">Aneryo Privacy Policy</a>.</p>
+    </main>
+
+    <footer>
+      Tyreest Studio · Aneryo · <code>com.tyreest.aneryo</code>
+    </footer>
+  </div>
+  <script>
+    function setLang(lang) {
+      document.getElementById('section-tr').classList.toggle('active', lang === 'tr');
+      document.getElementById('section-en').classList.toggle('active', lang === 'en');
+      document.getElementById('btn-tr').classList.toggle('active', lang === 'tr');
+      document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+      document.documentElement.lang = lang;
+    }
+  </script>
+</body>
+</html>
