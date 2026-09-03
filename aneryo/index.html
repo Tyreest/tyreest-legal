@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="canonical" href="https://tyreest.github.io/tyreest-legal/aneryo/" />
+  <title>Aneryo</title>
+  <meta name="description" content="Aneryo; anılarınızı, planlarınızı, önemli günlerinizi ve sayaçlarınızı tek yerde takip etmenizi sağlayan kişisel yaşam uygulamasıdır." />
+  <meta property="og:title" content="Aneryo" />
+  <meta property="og:description" content="Aneryo; anılarınızı, planlarınızı, önemli günlerinizi ve sayaçlarınızı tek yerde takip etmenizi sağlayan kişisel yaşam uygulamasıdır." />
+  <meta property="og:url" content="https://tyreest.github.io/tyreest-legal/aneryo/" />
+  <meta property="og:type" content="website" />
+  <style>
+    :root {
+      --bg: #FDFBF7;
+      --card-bg: #FFFFFF;
+      --text: #1C1B1A;
+      --text-muted: #5E5854;
+      --border: #E8E2D9;
+      --accent: #B85C38;
+      --accent-hover: #9E4D2E;
+      --badge-bg: #F0EAE1;
+      --badge-border: #E4DCD0;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #141210;
+        --card-bg: #1F1C1A;
+        --text: #F2EFE9;
+        --text-muted: #A8A19B;
+        --border: #332F2B;
+        --accent: #E07A5F;
+        --accent-hover: #F28C70;
+        --badge-bg: #2B2622;
+        --badge-border: #3E3731;
+      }
+    }
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      padding: 32px 20px 80px;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+      line-height: 1.65;
+      color: var(--text);
+      background-color: var(--bg);
+      display: flex;
+      justify-content: center;
+    }
+    .container {
+      width: 100%;
+      max-width: 46rem;
+    }
+    header {
+      margin-bottom: 2rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .brand-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-bottom: 1.2rem;
+    }
+    .app-title-group {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+    .app-title {
+      font-size: 2rem;
+      font-weight: 700;
+      margin: 0;
+      color: var(--accent);
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+    }
+    .app-tagline {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      margin: 0;
+      font-weight: 500;
+    }
+    .lang-switcher {
+      display: inline-flex;
+      background: var(--badge-bg);
+      border-radius: 20px;
+      padding: 4px;
+      border: 1px solid var(--border);
+    }
+    .lang-btn {
+      border: none;
+      background: none;
+      padding: 6px 14px;
+      border-radius: 16px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+    .lang-btn:hover {
+      color: var(--text);
+    }
+    .lang-btn.active {
+      background: var(--card-bg);
+      color: var(--text);
+      box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+    }
+    .meta-box {
+      font-size: 0.92rem;
+      color: var(--text-muted);
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 0.9rem 1.1rem;
+    }
+    .meta-item {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .meta-label {
+      font-weight: 600;
+      min-width: 140px;
+      color: var(--text);
+    }
+    h1 {
+      font-size: 1.7rem;
+      margin-top: 1.2rem;
+      margin-bottom: 0.5rem;
+      letter-spacing: -0.01em;
+      line-height: 1.3;
+    }
+    h2 {
+      font-size: 1.25rem;
+      margin-top: 2rem;
+      margin-bottom: 0.8rem;
+      color: var(--accent);
+      letter-spacing: -0.01em;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 0.3rem;
+    }
+    h3 {
+      font-size: 1.05rem;
+      margin-top: 0;
+      margin-bottom: 0.35rem;
+      color: var(--text);
+      font-weight: 600;
+    }
+    p {
+      font-size: 1rem;
+      color: var(--text);
+      margin: 0.8rem 0;
+    }
+    .lead {
+      font-size: 1.12rem;
+      line-height: 1.6;
+      color: var(--text);
+      margin-bottom: 1.5rem;
+    }
+    ul {
+      padding-left: 1.4rem;
+      margin: 0.8rem 0 1.2rem;
+    }
+    li {
+      margin-bottom: 0.4rem;
+      font-size: 1rem;
+    }
+    a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 500;
+    }
+    a:hover {
+      text-decoration: underline;
+      color: var(--accent-hover);
+    }
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 14px;
+      margin: 1.2rem 0 2rem;
+    }
+    .feature-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.1rem 1.2rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.03);
+    }
+    .feature-card p {
+      font-size: 0.94rem;
+      color: var(--text-muted);
+      margin: 0.3rem 0 0;
+      line-height: 1.5;
+    }
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.3rem 1.4rem;
+      margin: 1.2rem 0;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.03);
+    }
+    .privacy-card {
+      background: var(--badge-bg);
+      border-color: var(--badge-border);
+    }
+    .links-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-top: 1rem;
+    }
+    .link-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 0.9rem 1.1rem;
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      transition: border-color 0.15s ease;
+    }
+    .link-item:hover {
+      border-color: var(--accent);
+    }
+    .link-content {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+    .link-title {
+      font-weight: 600;
+      font-size: 1rem;
+    }
+    .link-desc {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+    }
+    .lang-section {
+      display: none;
+    }
+    .lang-section.active {
+      display: block;
+    }
+    footer {
+      margin-top: 3.5rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border);
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      text-align: center;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand-row">
+        <div class="app-title-group">
+          <span class="app-title">Aneryo</span>
+          <span class="app-tagline">Kişisel Yaşam &amp; Günlük Takip</span>
+        </div>
+        <nav class="lang-switcher" aria-label="Dil seçimi / Language selector">
+          <button class="lang-btn active" id="btn-tr" onclick="setLang('tr')">Türkçe</button>
+          <button class="lang-btn" id="btn-en" onclick="setLang('en')">English</button>
+        </nav>
+      </div>
+
+      <div class="meta-box">
+        <div class="meta-item"><span class="meta-label">Uygulama / App:</span> <span>Aneryo</span></div>
+        <div class="meta-item"><span class="meta-label">Paket / Package:</span> <code>com.tyreest.aneryo</code></div>
+        <div class="meta-item"><span class="meta-label">Geliştirici / Developer:</span> <span>Tyreest Studio</span></div>
+        <div class="meta-item"><span class="meta-label">İletişim / Contact:</span> <a href="mailto:tyreest.apps@gmail.com">tyreest.apps@gmail.com</a></div>
+      </div>
+    </header>
+
+    <!-- TÜRKÇE BÖLÜM -->
+    <main id="section-tr" class="lang-section active">
+      <h1>Aneryo</h1>
+      <p class="lead">Aneryo; anılarınızı, planlarınızı, önemli günlerinizi ve sayaçlarınızı tek yerde takip etmenizi sağlayan kişisel yaşam uygulamasıdır.</p>
+
+      <h2>Temel Özellikler</h2>
+      <div class="feature-grid">
+        <div class="feature-card">
+          <h3>Plan ve Önemli Gün Takibi</h3>
+          <p>Yıldönümleri, doğum günleri, özel günler ve günlük planlar için hatırlatıcılar ve tekrar seçenekleri.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Anı ve Fotoğraf Kaydı</h3>
+          <p>Önemli anları fotoğraflarla zenginleştirilmiş günlük notları olarak kategorize ederek saklama.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Sayaçlar</h3>
+          <p>Geri sayım ve geçen gün sayaçları ile hedeflerinizi ve dönüm noktalarınızı anlık takip etme.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Takvim Görünümü</h3>
+          <p>Planlarınızı, anılarınızı ve etkinliklerinizi tek bir bütüncül takvim ajandasında bir arada inceleme.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Yerel Yedekleme</h3>
+          <p>Tüm verilerinizi çevrimdışı ve cihazınızda saklanan şifreli yerel yedek dosyaları olarak dışa aktarma.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Aneryo Pro ile Bulut Yedekleme</h3>
+          <p>İsteğe bağlı Google ile giriş yaparak verilerinizi güvenle bulutta yedekleme ve yeni cihazlara aktarma.</p>
+        </div>
+      </div>
+
+      <h2>Gizlilik Yaklaşımı</h2>
+      <div class="card privacy-card">
+        <p>Aneryo, gizliliği ve veri egemenliğini temel alan <strong>yerel öncelikli (local-first)</strong> bir kişisel yaşam uygulamasıdır.</p>
+        <ul>
+          <li><strong>Yerel Depolama:</strong> Günlük verileriniz, anılarınız, notlarınız ve fotoğraflarınız varsayılan olarak yalnızca kendi cihazınızda saklanır.</li>
+          <li><strong>İzleyici Bulunmaz:</strong> Uygulama içinde üçüncü taraf reklam ağları (AdMob vb.), kullanıcı izleme araçları (tracker) veya analitik telemetrisi yer almaz.</li>
+          <li><strong>Güvenli Aktarım:</strong> İsteğe bağlı bulut yedekleme tercih edildiğinde, bulut yedekleri cihazda şifrelenerek aktarılır.</li>
+        </ul>
+      </div>
+
+      <h2>Yasal Belgeler ve Doğrudan Bağlantılar</h2>
+      <div class="links-list">
+        <div class="link-item">
+          <div class="link-content">
+            <a class="link-title" href="https://tyreest.github.io/tyreest-legal/aneryo/privacy/">Gizlilik Politikası</a>
+            <span class="link-desc">Veri işleme ilkeleri, depolama ve kullanıcı hakları hakkında kapsamlı bilgilendirme.</span>
+          </div>
+        </div>
+        <div class="link-item">
+          <div class="link-content">
+            <a class="link-title" href="https://tyreest.github.io/tyreest-legal/aneryo/delete-account/">Hesap ve Veri Silme</a>
+            <span class="link-desc">Aneryo bulut hesabı ve ilişkili tüm bulut verilerinin kalıcı silinme adımları.</span>
+          </div>
+        </div>
+        <div class="link-item">
+          <div class="link-content">
+            <a class="link-title" href="mailto:tyreest.apps@gmail.com">Destek ve İletişim: tyreest.apps@gmail.com</a>
+            <span class="link-desc">Geliştirici ekiple doğrudan e-posta yoluyla iletişim kurun.</span>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- ENGLISH SECTION -->
+    <main id="section-en" class="lang-section">
+      <h1>Aneryo</h1>
+      <p class="lead">Aneryo is a personal life companion app that brings your memories, plans, special occasions, and counters together in one place.</p>
+
+      <h2>Core Features</h2>
+      <div class="feature-grid">
+        <div class="feature-card">
+          <h3>Plans &amp; Special Days</h3>
+          <p>Organize anniversaries, birthdays, events, and recurring daily routines with customizable reminders.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Memories &amp; Photo Journaling</h3>
+          <p>Safely preserve life milestones and reflections with categorized notes and photos.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Counters</h3>
+          <p>Track time toward future milestones or count days since significant life achievements.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Calendar View</h3>
+          <p>Seamlessly view all upcoming plans, milestones, and journal entries on an interactive calendar.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Local Backup</h3>
+          <p>Export and restore offline encrypted local backup archives directly on your device storage.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Cloud Backup with Aneryo Pro</h3>
+          <p>Optionally sign in with Google to securely store encrypted cloud backups and restore on new devices.</p>
+        </div>
+      </div>
+
+      <h2>Privacy Positioning</h2>
+      <div class="card privacy-card">
+        <p>Aneryo is built as a private, personal, <strong>local-first</strong> mobile application.</p>
+        <ul>
+          <li><strong>On-Device by Default:</strong> Your journal entries, memories, photos, and plans stay on your device storage by default.</li>
+          <li><strong>No Trackers or Ads:</strong> The app contains no third-party advertising SDKs, behavioral tracking scripts, or analytics telemetry.</li>
+          <li><strong>Protected Transfer:</strong> When optional cloud backup is enabled, cloud backups are encrypted on-device before transfer.</li>
+        </ul>
+      </div>
+
+      <h2>Legal Documents &amp; Direct Links</h2>
+      <div class="links-list">
+        <div class="link-item">
+          <div class="link-content">
+            <a class="link-title" href="https://tyreest.github.io/tyreest-legal/aneryo/privacy/">Privacy Policy</a>
+            <span class="link-desc">Comprehensive information on data handling practices, storage, and user rights.</span>
+          </div>
+        </div>
+        <div class="link-item">
+          <div class="link-content">
+            <a class="link-title" href="https://tyreest.github.io/tyreest-legal/aneryo/delete-account/">Account &amp; Data Deletion</a>
+            <span class="link-desc">Instructions for permanently deleting your Aneryo cloud account and cloud backup packages.</span>
+          </div>
+        </div>
+        <div class="link-item">
+          <div class="link-content">
+            <a class="link-title" href="mailto:tyreest.apps@gmail.com">Support &amp; Inquiries: tyreest.apps@gmail.com</a>
+            <span class="link-desc">Contact the developer directly via email.</span>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      Tyreest Studio · Aneryo · <code>com.tyreest.aneryo</code><br />
+      <a href="https://tyreest.github.io/tyreest-legal/aneryo/privacy/">Gizlilik Politikası / Privacy Policy</a> · 
+      <a href="https://tyreest.github.io/tyreest-legal/aneryo/delete-account/">Hesap Silme / Account Deletion</a> · 
+      <a href="mailto:tyreest.apps@gmail.com">tyreest.apps@gmail.com</a>
+    </footer>
+  </div>
+
+  <script>
+    function setLang(lang) {
+      document.getElementById('section-tr').classList.toggle('active', lang === 'tr');
+      document.getElementById('section-en').classList.toggle('active', lang === 'en');
+      document.getElementById('btn-tr').classList.toggle('active', lang === 'tr');
+      document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+      document.documentElement.lang = lang;
+    }
+  </script>
+</body>
+</html>
